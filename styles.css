@@ -1,3 +1,4 @@
+/* styles.css */
 /* CSS Reset */
 * {
     margin: 0;
@@ -15,10 +16,11 @@ body {
 .main-header {
     background-color: #2c3e50;
     padding: 1rem;
-    position: fixed;
+    position: auto;
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -68,6 +70,11 @@ body {
 
 .biography-content {
     padding-top: 100px;
+}
+
+/* Technical Skills Styling */
+.technical-skills {
+    margin-top: 30px; /* Added spacing between sections */
 }
 
 .skills-grid {
@@ -120,14 +127,14 @@ h2 {
 /* List Styling */
 ul {
     list-style-type: none;
-    padding-left: 2rem;
+    padding-left: 0rem;
 }
 
 li {
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     .nav-container {
         flex-direction: column;
         align-items: center;
@@ -136,5 +143,10 @@ li {
     
     .skills-grid {
         grid-template-columns: 1fr !important;
+    }
+
+    /* Mobile Header Adjustments */
+    .main-header {
+        padding: 0.5rem; /* Reduced padding for mobile */
     }
 }
